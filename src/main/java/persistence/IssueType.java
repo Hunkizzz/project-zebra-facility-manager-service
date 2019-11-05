@@ -16,9 +16,9 @@ import java.util.UUID;
 @Builder(toBuilder = true)
 @AllArgsConstructor
 @NoArgsConstructor
-public class IssueTypeGroup {
+public class IssueType {
     private UUID uuid;
     private String name;
     @Column(name = "is_active")
-    private Boolean active;
+    private Boolean isActive;
 }

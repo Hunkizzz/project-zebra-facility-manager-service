@@ -20,8 +20,5 @@ public class Facility {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID uuid;
-
     private String name;
-
-    private UUID floorUuid;
 }

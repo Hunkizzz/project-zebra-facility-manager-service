@@ -23,11 +23,15 @@ public class Beacon {
     private UUID uuid;
 
     private String qrCodeUrl;
-    @Column(name = "is_activated")
-    private Boolean activated;
+    private UUID qrScanUuid;
+    private Boolean isActivated;
     private Boolean activateOn;
     @Temporal(TemporalType.TIMESTAMP)
     private Date createdOn;
+
+    @OneToOne
+    @JoinColumn(name = "facility_uuid")
+    private Facility facility;
 
     @PrePersist
     protected void onCreate() {
