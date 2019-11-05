@@ -1,4 +1,4 @@
-package persistence.entity;
+package team.projectzebra.persistence.entity;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.Set;
 import java.util.UUID;
 
 @Data
@@ -23,15 +24,15 @@ public class Beacon {
     private UUID uuid;
 
     private String qrCodeUrl;
-    private UUID qrScanUuid;
+    private String qrScanUuid;
     private Boolean isActivated;
-    private Boolean activateOn;
+    private Date activatedOn;
     @Temporal(TemporalType.TIMESTAMP)
     private Date createdOn;
-
-    @OneToOne
-    @JoinColumn(name = "facility_uuid")
+    @OneToOne(mappedBy = "beacon", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Facility facility;
+    @OneToOne(mappedBy = "beacon", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private IssueGroup issueGroup;
 
     @PrePersist
     protected void onCreate() {

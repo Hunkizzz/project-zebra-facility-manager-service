@@ -1,4 +1,4 @@
-package persistence.entity;
+package team.projectzebra.persistence.entity;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.*;
