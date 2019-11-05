@@ -1,4 +1,4 @@
-package persistence;
+package persistence.entity;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -21,4 +21,7 @@ public class Facility {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID uuid;
     private String name;
+    @OneToOne
+    @JoinColumn(name = "beacon_uuid")
+    private Beacon beacon;
 }

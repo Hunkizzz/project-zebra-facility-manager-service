@@ -1,4 +1,4 @@
-package persistence;
+package persistence.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -18,6 +18,7 @@ import java.util.UUID;
 @NoArgsConstructor
 public class IssueType {
     private UUID uuid;
+    private String code;
     private String name;
     @Column(name = "is_active")
     private Boolean isActive;

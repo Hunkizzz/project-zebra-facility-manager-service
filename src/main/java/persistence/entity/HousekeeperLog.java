@@ -1,4 +1,4 @@
-package persistence;
+package persistence.entity;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.*;
