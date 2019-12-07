@@ -13,7 +13,7 @@ import java.util.UUID;
 @Table(name = "reservation_log")
 @AllArgsConstructor(access = AccessLevel.PACKAGE)
 @NoArgsConstructor(access = AccessLevel.PACKAGE)
-public class HousekeeperLog {
+public class FacilityManagerLog {
     @ApiModelProperty(notes = "The Java generated reservationLog uuid")
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

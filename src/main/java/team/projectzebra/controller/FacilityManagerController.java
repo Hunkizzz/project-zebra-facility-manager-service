@@ -27,20 +27,20 @@ import java.util.UUID;
 @RestController
 //@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RequestMapping("/api/v1/projectzebrateam-housekeeper-service")
-public class HousekeeperController {
+public class FacilityManagerController {
 
     BeaconRepository beaconRepository;
     FacilityRepository facilityRepository;
     IssueGroupRepository issueGroupRepository;
     IssueTypeRepository issueTypeRepository;
 
-    private static final Logger logger = LoggerFactory.getLogger(HousekeeperController.class);
+    private static final Logger logger = LoggerFactory.getLogger(FacilityManagerController.class);
 
     @Autowired
-    public HousekeeperController(BeaconRepository beaconRepository,
-                                 FacilityRepository facilityRepository,
-                                 IssueGroupRepository issueGroupRepository,
-                                 IssueTypeRepository issueTypeRepository
+    public FacilityManagerController(BeaconRepository beaconRepository,
+                                     FacilityRepository facilityRepository,
+                                     IssueGroupRepository issueGroupRepository,
+                                     IssueTypeRepository issueTypeRepository
     ) {
         this.beaconRepository = beaconRepository;
         this.facilityRepository = facilityRepository;
