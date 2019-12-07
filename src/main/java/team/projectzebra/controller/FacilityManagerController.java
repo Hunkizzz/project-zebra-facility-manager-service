@@ -35,7 +35,7 @@ public class FacilityManagerController {
     IssueTypeRepository issueTypeRepository;
 
     private static final Logger logger = LoggerFactory.getLogger(FacilityManagerController.class);
-
+//test
     @Autowired
     public FacilityManagerController(BeaconRepository beaconRepository,
                                      FacilityRepository facilityRepository,
