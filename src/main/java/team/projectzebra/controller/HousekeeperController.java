@@ -107,7 +107,7 @@ public class HousekeeperController {
     }
 
 
-    @ApiOperation(value = "Add issue type")
+    @ApiOperation(value = "Get beacon`s problems")
     @GetMapping(path = "/beacons")
         // Map ONLY POST Requests
     ResponseEntity<Iterable<Beacon>> getBeaconInfo(HttpServletResponse response) throws Exception {
